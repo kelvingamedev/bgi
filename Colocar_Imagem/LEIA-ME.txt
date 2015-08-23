@@ -1,0 +1,2 @@
+Este projeto é uma versão anterior ao sidscrolling. Enquanto sidcrolling procura implementar a funcionalidade homônima, este 
+serve para revisão de como colocar e movimentar uma imagem na tela.
