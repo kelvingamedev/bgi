@@ -11,7 +11,6 @@
 
 using namespace std;
 
-void getImagemPersonagem(void *imagem);
 
 int main(){
 	
@@ -25,22 +24,11 @@ int main(){
 	// Detecta e inicia o modo gráfico
 	int driver, mode;
 	detectgraph(&driver, &mode);
-	initgraph(&driver,&mode,"");
+	initgraph(&driver,&mode,"");	
 	
-	// Imagem do perosonagem
-	void *imagem;
-	getImagemPersonagem(&imagem);
-	
-	/*
 	const int LARGURA_IMAGEM = 400;
 	const int ALTURA_IMAGEM = 200;
 	
-	// Coordenadas do personagem
-	int personagemX = 0;
-	const int PERSONAGEM_Y = 0;
-	
-	// Velocidade constante do personagem
-	const int VELOCIDADE = 10;
 
 	// Lê arquivo de imagem
 	readimagefile("desenho.gif",0,0,LARGURA_IMAGEM,ALTURA_IMAGEM);
@@ -52,7 +40,7 @@ int main(){
 	void *imagem = malloc(tamanho); 
 	
 	// Copia uma imagem da tela para memória
-	getimage(0,0,LARGURA_IMAGEM,ALTURA_IMAGEM,imagem);*/
+	getimage(0,0,LARGURA_IMAGEM,ALTURA_IMAGEM,imagem);
 
 	// Receberá o input do jogador
 	int tecla = 0;
@@ -116,22 +104,4 @@ int main(){
 	return 0;
 }
 
-void getImagemPersonagem(void *imagem){
-	
-	// Dimensões da imagem do personagem
-	const int LARGURA_IMAGEM = 400;
-	const int ALTURA_IMAGEM = 200;
 
-	// Lê arquivo de imagem
-	readimagefile("desenho.gif",0,0,LARGURA_IMAGEM,ALTURA_IMAGEM);
-	
-	// Calcula o espaço necessário para armazenar a imagem em bytes
-	int tamanho = imagesize(0,0,LARGURA_IMAGEM,ALTURA_IMAGEM);
-	
-	// Configura o tamanho da variável de controle da imagem
-	imagem = malloc(tamanho); 
-	
-	// Copia uma imagem da tela para a memória
-	getimage(0,0,LARGURA_IMAGEM,ALTURA_IMAGEM,*imagem);
-	
-}
